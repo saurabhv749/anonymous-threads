@@ -7,9 +7,6 @@ chai.use(chaiHttp);
 
 const threadId = '61adf06312f258a3b295031c'
 
-/**
- * create thread -> report thread -> create reply -> report reply ->  read thread with reply -> delete reply -> deleter thread
- */
 suite('Functional Tests', function() {
 
     test('Creating a new thread: POST request to /api/threads/{board}' , function(done){
