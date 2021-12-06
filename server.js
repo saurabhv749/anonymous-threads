@@ -19,6 +19,9 @@ app.use(cors({origin: '*'})); //For FCC testing purposes only
 app.use( helmet.frameguard() )
 app.use( helmet.dnsPrefetchControl() )
 app.use( helmet.referrerPolicy({policy:["origin"]}) )
+app.use(helmet.referrerPolicy({
+    policy: "no-referrer",
+  }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
