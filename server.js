@@ -20,7 +20,7 @@ app.use( helmet.frameguard() )
 app.use( helmet.dnsPrefetchControl() )
 app.use( helmet.referrerPolicy({policy:["origin"]}) )
 app.use(helmet.referrerPolicy({
-    policy: "no-referrer",
+    policy: "same-origin",
   }));
 
 app.use(express.json());
